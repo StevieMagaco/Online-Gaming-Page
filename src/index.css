@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body, #root{
+  height: 100%;
+}
+
+.dashboardHeader{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-around;
+  background-color: black;
+  color: gold;
+  /*border-width: medium;
+  border-style: solid;
+  border-color: #ffffffbd;
+  box-sizing: border-box;*/
+}
+
+.dashboardHeader button{
+  margin: auto 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .4);
+  color: gold;
+  height: 80%;
+  width: 100px;
+}
+
+.dashboardHeader button:hover{
+  background-color: rgba(255, 255, 255, .8);
+  color: black;
+}
+
+.dashboardContainer{
+  display: flex;
+  height: 100%;
+}
+
+.dashboardContainer .siderbar, .dashboardContainer .content{
+  height: 100vh;
+}
+
+.dashboardContainer .siderbar{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 20%;
+  background-image: linear-gradient(141deg, #00000054 0%, #dea900 51%, #dda800 75%);
+  border-width: medium;
+  border-style: solid;
+  border-color: #ffffffbd;
+  box-sizing: border-box;
+}
+
+.dashboardContainer .siderbar button{
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.dashboardContainer .content{
+  flex: 0 0 80%;
+  background-color: black;
+  box-shadow: inset 0 0 50px #ffd70054;
+}
+
+.dashboardContainer .content h1{
+  color: white;
+  text-align: center;
+}
