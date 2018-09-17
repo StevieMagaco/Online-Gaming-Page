@@ -1,6 +1,7 @@
 .Login{
   background-color: #00000021;
-  height: 100vh;
+  height: 80vh;
+  width: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,26 +15,33 @@
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: white;
-    width: 70%;
+    background-color: #000000d6;
+    width: 90%;
     height: 70%;
-    border-width: 50px;
+    /*border-width: 50px;
     border-style: solid;
     border-color: #9e873e;
-    border-radius: 90px;
+    border-radius: 90px;*/
     box-shadow: 0 0 80px #ffd7007a;
+    border-radius: 5px;
 }
 
 .Login label {
-  font-size: 25px;
+  font-size: 1em;
   padding: 30px;
+  color: white;
 }
 
 .Login input {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    padding: 4px;
+    color: white;
     height: 30px;
-    width: 200px;
+    margin-bottom: 35px;
+    width: 13em;
     border-width: 0;
-    background-color: rgba(0,0,0,.1);
     border-radius: 10px;
     box-shadow: 0 0 20px #9e873e78;
 }
@@ -41,11 +49,24 @@
 .Login button {
     width: 200px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 0;
     margin: 20px;
     font-size: 20px;
-    color: white;
+    color: black;
     box-shadow: 0 0 30px rgba(0,0,0,.5);
     background-color: #dea900;
+    transition-duration: .4s;
+}
+
+.Login button:disabled{
+  background-color: red;
+  text-decoration: line-through;
+  color: white;
+}
+
+.Login button:hover:enabled{
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 40px #9e873e78;
 }

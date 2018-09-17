@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import ContainerImage from '../images/login.jpg';
+import { browserHistory, Route , withRouter} from 'react-router-dom';
+import ContainerImage from '../images/bitcoin1.jpg';
 import "../styles/Login.css";
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
+    this.pushToNextPage = this.pushToNextPage.bind(this);
 
     this.state = {
       email: "",
@@ -26,6 +28,11 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+  }
+
+  pushToNextPage(){
+    //console.log('Button Pressed');
+    this.props.history.push("/dashboard");
   }
 
   render() {
@@ -52,11 +59,11 @@ export default class Login extends Component {
           <Button
             block
             bsSize="large"
-            onClick={() => this.props.history.push("/dashboard")}
+            onClick={this.pushToNextPage}
             disabled={!this.validateForm()}
             type="submit"
           >
-            Login
+            <span>Login</span>
           </Button>
         </form>
       </div>
@@ -65,11 +72,13 @@ export default class Login extends Component {
 }
 
 const style = {
-  container: {
+  fromImage: {
     backgroundImage: `url(${ContainerImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     overflow: 'hidden',
     height: '100%'
-  },
+  }
 }
+
+export default withRouter(Login);

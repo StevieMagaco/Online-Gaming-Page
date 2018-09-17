@@ -10,6 +10,10 @@ export default class Dashboard extends Component {
     this.state = { page: 0 };
   }
 
+  componentDidMount(){
+    console.log('PAGE URL:', this.props.location.pathname);
+  }
+
   renderGame(){
     if( this.state.page == 0)
         return( <GameOne/> )
