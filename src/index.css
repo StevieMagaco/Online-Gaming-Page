@@ -115,6 +115,7 @@ textarea, select, input, button { outline: none; }
     color: white;
     background-color: #8d8b7e94;
     transition-duration: .5s;
+    min-width: 100px;
 }
 
 .Home .home-center-content button:hover{
