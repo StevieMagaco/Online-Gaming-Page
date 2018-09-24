@@ -27,8 +27,8 @@ export default class Dashboard extends Component {
         <Header/>
         <div className='dashboardContainer'>
           <div className='siderbar'>
-          <button onClick={() => this.setState({page: 0 }, () => {console.log(this.state.page);})}>Poker</button>
-          <button onClick={() => this.setState({page: 1 }, () => {console.log(this.state.page);})}>Slots</button>
+          <button onClick={() => this.setState({page: 0 }, () => {console.log(this.state.page);})}>Game 1: Poker</button>
+          <button onClick={() => this.setState({page: 1 }, () => {console.log(this.state.page);})}>Game 2: Slots</button>
           </div>
           <div className='content'>
           { this.renderGame() }

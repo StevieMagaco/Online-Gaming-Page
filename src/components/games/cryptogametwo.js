@@ -4,7 +4,7 @@ import Iframe from 'react-iframe';
 class GameTwo extends Component {
     render() {
         return (
-          <div>
+          <div className="gamecontainer">
           <Iframe url="https://cryptocurgamestwo.herokuapp.com/"
           width="80%"
           height="80%"

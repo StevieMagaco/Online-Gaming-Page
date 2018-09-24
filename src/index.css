@@ -46,11 +46,12 @@ textarea, select, input, button { outline: none; }
 }
 
 .dashboardContainer .siderbar, .dashboardContainer .content{
-  height: 100vh;
+  height: 95vh;
 }
 
 .dashboardContainer .siderbar{
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   flex: 0 0 20%;
   background-image: linear-gradient(141deg, #00000054 0%, #dea900 51%, #dda800 75%);
@@ -58,12 +59,30 @@ textarea, select, input, button { outline: none; }
   border-style: solid;
   border-color: #ffffffbd;
   box-sizing: border-box;
+  box-shadow: inset 0 0 30px black;
 }
 
 .dashboardContainer .siderbar button{
-  width: 50%;
-  height: 30px;
+  /*width: 50%;
+  height: 30px;*/
   margin: 0 auto;
+  border-width: 0px;
+  border-radius: 5px;
+  color: #3c3b3b;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-shadow: 0 0 5px white;
+  transition-duration: .5s;
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+
+.dashboardContainer .siderbar button:hover{
+  background-color: gold;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,.4);
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0,0,0,.6);
 }
 
 .dashboardContainer .content{
@@ -125,6 +144,12 @@ textarea, select, input, button { outline: none; }
 
 .gameframe{
   margin:auto;
+}
+
+.gamecontainer{
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 @keyframes bouncy {
  0%{top:0em}
