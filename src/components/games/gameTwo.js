@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import Iframe from 'react-iframe';
 
 class GameTwo extends Component {
     render() {
         return (
-                <div>
-                    <h1>Game 2</h1>
-                </div>
+          <div>
+          <Iframe url="https://cryptocurgamestwo.herokuapp.com/"
+width="80%"
+height="80%"
+id="myId"
+className="gameframe"
+allowFullScreen/>
+          </div>
                 )
             }
 }

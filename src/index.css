@@ -122,6 +122,10 @@ textarea, select, input, button { outline: none; }
     box-shadow: -5px 5px 20px rgba(0,0,0,.8);
     cursor: pointer;
 }
+
+.gameframe{
+  margin:auto;
+}
 @keyframes bouncy {
  0%{top:0em}
  40%{top:0em}

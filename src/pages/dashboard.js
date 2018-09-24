@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from '../components/header';
-import GameOne from '../components/games/gameOne';
-import GameTwo from '../components/games/gameTwo';
+import GameOne from '../components/games/gameone';
+import GameTwo from '../components/games/gametwo';
 /*import { getGameNum, setGameNum } from '../states/game';*/
 
 export default class Dashboard extends Component {
@@ -27,8 +27,8 @@ export default class Dashboard extends Component {
         <Header/>
         <div className='dashboardContainer'>
           <div className='siderbar'>
-          <button onClick={() => this.setState({page: 0 }, () => {console.log(this.state.page);})}>Game 1</button>
-          <button onClick={() => this.setState({page: 1 }, () => {console.log(this.state.page);})}>Game 2</button>
+          <button onClick={() => this.setState({page: 0 }, () => {console.log(this.state.page);})}>Poker</button>
+          <button onClick={() => this.setState({page: 1 }, () => {console.log(this.state.page);})}>Slots</button>
           </div>
           <div className='content'>
           { this.renderGame() }
