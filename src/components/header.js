@@ -25,7 +25,7 @@ class Header extends Component {
       return (
         <div className='homeHeader sticky dashboardHeader'>
           <p>Welcome</p>
-          <div>
+          <div className="headerButtons">
             <button>Rules</button>
             <button>Help</button>
             <button>News</button>
