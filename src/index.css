@@ -164,6 +164,9 @@ textarea, select, input, button { outline: none; }
   .Login {
     width: 50vh;
   }
+  .Login input {
+    width: 10em;
+  }
 }
 
 @keyframes bouncy {
