@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from '../components/header';
-import GameOne from '../components/games/gameone';
-import GameTwo from '../components/games/gametwo';
+import GameOne from '../components/games/cryptogameone';
+import GameTwo from '../components/games/cryptogametwo';
 /*import { getGameNum, setGameNum } from '../states/game';*/
 
 export default class Dashboard extends Component {
