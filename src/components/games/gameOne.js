@@ -6,11 +6,11 @@ class GameOne extends Component {
         return (
                 <div>
                 <Iframe url="https://cryptocurgamesone.herokuapp.com/"
-    width="80%"
-    height="80%"
-    id="myId"
-    className="gameframe"
-    allowFullScreen/>
+                  width="80%"
+                  height="80%"
+                  id="myId"
+                  className="gameframe"
+                  allowFullScreen/>
                 </div>
                 )
             }
