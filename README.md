@@ -1,3 +1,16 @@
+## NOTES
+This is a online gaaming platform made with React.
+
+This project includes the front-end of this project.
+
+It's based on a informational home page with a login section and a gaming dashboard.
+
+Status:
+Waiting for funds for building the back-end
+## END NOTES
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

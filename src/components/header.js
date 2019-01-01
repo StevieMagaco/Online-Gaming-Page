@@ -1,19 +1,21 @@
+//import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+//import { browserHistory, Route , withRouter} from 'react-router-dom';
+//import homeImage from '../images/homepage.png'
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { browserHistory, Route , withRouter} from 'react-router-dom';
-import homeImage from '../images/homepage.png'
+import { withRouter } from 'react-router-dom';
+
 
 class Header extends Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
-  }
+  }*/
 
   logout(){
     this.props.history.push("/");
   }
 
   render() {
-    if(this.props.location.pathname == '/dashboard')
+    if(this.props.location.pathname === '/dashboard')
     return (
       <div className='dashboardHeader'>
         <p>Welcome</p>

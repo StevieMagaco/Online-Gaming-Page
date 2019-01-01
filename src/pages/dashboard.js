@@ -15,7 +15,7 @@ export default class Dashboard extends Component {
   }
 
   renderGame(){
-    if( this.state.page == 0)
+    if( this.state.page === 0)
         return( <GameOne/> )
     else
         return( <GameTwo/> )

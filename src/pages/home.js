@@ -1,22 +1,9 @@
+//import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import React, { Component } from "react";
 import Header from '../components/header';
 import Modal from 'react-modal';
 import Login from '../components/login';
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import homeImage from '../images/bitcoin2.jpg';
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    background            : 'none',
-    border                : 'none'
-  }
-};
 
 export default class Home extends Component {
   componentWillMount() {
@@ -24,30 +11,22 @@ export default class Home extends Component {
   }
   constructor(props) {
     super(props);
-    this.state = {
-        modalIsOpen: false
-      };
+    this.state = { modalIsOpen: false };
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
 
-      this.openModal = this.openModal.bind(this);
-      this.afterOpenModal = this.afterOpenModal.bind(this);
-      this.closeModal = this.closeModal.bind(this);
-    }
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
 
-    openModal() {
-      this.setState({modalIsOpen: true});
-    }
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+  }
 
-    afterOpenModal() {
-      // references are now sync'd and can be accessed.
-      //this.subtitle.style.color = '#f00';
-    }
-
-    closeModal() {
-      this.setState({modalIsOpen: false});
-    }
-
-  componentDidMount(){
-    console.log('PAGE URL:', this.props.location.pathname);
+  closeModal() {
+    this.setState({modalIsOpen: false});
   }
 
   render() {
@@ -57,17 +36,14 @@ export default class Home extends Component {
         <div className="home-center-content">
         <h1>Win with Crypto!</h1>
         <button onClick={this.openModal} style={style.login}>Log In</button>
-
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
+          style={modalStyles}
+          contentLabel="Example Modal" >
           <Login/>
         </Modal>
-
         </div>
       </div>
     );
@@ -89,4 +65,18 @@ const style = {
     bottom:'40%',
     left:'42%',*/
   }
-}
+};
+
+
+const modalStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    background            : 'none',
+    border                : 'none'
+  }
+};

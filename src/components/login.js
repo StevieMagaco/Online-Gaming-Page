@@ -1,7 +1,8 @@
+//import { browserHistory, Route , withRouter} from 'react-router-dom';
+//import ContainerImage from '../images/bitcoin1.jpg';
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { browserHistory, Route , withRouter} from 'react-router-dom';
-import ContainerImage from '../images/bitcoin1.jpg';
+import { withRouter}  from 'react-router-dom';
 import "../styles/Login.css";
 
 class Login extends Component {
@@ -71,7 +72,10 @@ class Login extends Component {
   }
 }
 
-const style = {
+export default withRouter(Login);
+
+
+/*const style = {
   fromImage: {
     backgroundImage: `url(${ContainerImage})`,
     backgroundSize: 'cover',
@@ -79,6 +83,4 @@ const style = {
     overflow: 'hidden',
     height: '100%'
   }
-}
-
-export default withRouter(Login);
+}*/
